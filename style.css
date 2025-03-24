@@ -114,18 +114,65 @@ a:link{
 #btn-1{
     color: white;
     background: #122d40;
+    margin-top: 10px;
 
 }
 #btn-2{
     background: white;
     color: #122d40;
+    margin-left: 10px;
+    margin-top: 10px;
 
 }
 #btn-1:hover{
     background: #01e281;
     color: #122d40;
+    
 }
 #btn-2:hover{
     background: #01e281;
     color: #122d40;
+    
+}
+#description {
+    position: relative; 
+    width: 1000px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin-left: 400px;
+}
+
+.desinfo {
+    position: absolute; 
+    width: 22%;
+    padding: 10px;
+    text-align: left;
+    align-items: center;
+    gap: 10px; 
+}
+
+#shipping {
+    left: 20px;
+}
+
+#return {
+    left: 270px;
+}
+
+#secure {
+    left: 520px;
+}
+
+#support {
+    left: 770px;
+}
+
+.desinfo img {
+    width: 40px;
+    height: auto;
 }
