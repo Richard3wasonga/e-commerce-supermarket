@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#main-header{
+    position: relative;
+    background: #122d40;
+    display: flex;
+    gap: 20px;
+    height: 100px;
+}
+#main-header h1{
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+#main-header input{
+    height: 40px;
+    width: 300px;
+    border-radius: 100px;
+    
+}
+#main-header button{
+    border-radius: 50%;
+    padding: 7px;
+    cursor: pointer;
+}
+#sub-header{
+    position: absolute;
+    background: #122d40;
+    text-decoration: none;
+    width: 500px;
+    padding: 10px;
+    border-radius: 100px;
+    top: 90px;
+    left: 60px;
+    height: 60px;
+    
+}
+#sub-header ol{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    
+}
+#sub-header li{
+    margin-top: 7px;
+
+}
+.flame i{
+    color: red;
+    margin-left: 5px;
+    
+}
+.basket i{
+    color: aqua;
+    margin-right: 3px;
+}
+a:link{
+    color: white;
+}
+
