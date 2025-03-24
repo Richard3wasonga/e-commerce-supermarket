@@ -5,30 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuikCyber Mall</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
 </head>
 <body>
     <div id="main-header">
         <h1>QuikCyber Mall</h1>
-        <form>
-        <input type="text",name="search",id="search-bar", placeholder="What are you looking for?">
-        <button type="submit",id="search-icon"><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></i></button>
+        <form id="search-form">
+        <input type="text" name="search" id="search-bar" placeholder="What are you looking for?">
+        <button type="submit" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
+        <div id="sub-header">
+            <nav class="navigate">
+                <ol>
+                    <li class="basket"><i class="fa-solid fa-basket-shopping"></i><a  code style="text-decoration: none;"href="new-products">New products</a></li>
+                    <li class="flame"><a code style="text-decoration: none;" href="best-sales">Best sales</a><i class="fa-solid fa-fire"></i></li>
+                    <li><a code style="text-decoration: none;" href="special-offer">Special offer</a></li>
+                    <li><a code style="text-decoration: none;" href="quick-find">Quick find</a></li>
+                    <li><a code style="text-decoration: none;" href="contacts">Contacts</a></li>
+                </ol>
+            </nav>
+        </div>
+        
+        
         
     </div>
-    <div id="sub-header">
-        <nav class="navigate">
-            <ol>
-                <li class="basket"><i class="fa-solid fa-basket-shopping"></i><a  code style="text-decoration: none;"href="new-produncts">New products</a></li>
-                <li class="flame"><a code style="text-decoration: none;" href="best-sales">Best sales</a><i class="fa-solid fa-fire"></i></li>
-                <li><a code style="text-decoration: none;" href="special-offer">Special offer</a></li>
-                <li><a code style="text-decoration: none;" href="quick-find">Quick find</a></li>
-                <li><a code style="text-decoration: none;" href="contacts">Contacts</a></li>
-            </ol>
-        </nav>
-    </div>
+    <div id="outer-intro">
+        
+        <div id="intro">
+            <h2>QuikCyber Mall</h2>
+            <h2>Fresher than Ever </h2>
+            <p>A supermarket is a self-service shop offering a wide variety <br> of food,beverages and household products, organized <br> into sections</p>
+            <button id="btn-1">25% off Festival</button>
+            <button id ="btn-2">Discover shop</button>
     
-
-    <style src="index.js"></style>
+        </div>
+        <img src="images/model-1.png" alt="lady holding grogery">
+    </div>
+    <div>
+        <div>
+            <ol>
+                <li>Free shipping</li>
+                <li>Return for free</li>
+                <li>Secure payment</li>
+                <li>24/7 support</li>
+            </ol>
+        </div>
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>

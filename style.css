@@ -14,19 +14,44 @@
     background: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    
 
 }
-#main-header input{
+#search-form{
+    position: relative;
+    width: 400px
+}
+#search-bar{
+    width: 100%;
     height: 40px;
-    width: 300px;
     border-radius: 100px;
+    padding: 0 50px 0 20px;
+    border: 1px solid #ccc;
+    outline:none;
+    box-sizing: border-box;
+    background: #FFFFFF26;
+}
+#search-icon{
+    position: absolute;
+    right: 10px;
+    top: 20%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #122d40;
+    font-size: 16px;
+    padding: 0;
+}
+#search-icon i {
+    font-size: 18px;
+    color:white
     
 }
-#main-header button{
-    border-radius: 50%;
-    padding: 7px;
-    cursor: pointer;
+#search-icon:hover i{
+    color: #01e281;
 }
+
 #sub-header{
     position: absolute;
     background: #122d40;
@@ -61,4 +86,46 @@
 a:link{
     color: white;
 }
+#outer-intro{
+    background:#ffec62;
+    height: 700px;
+    background-blend-mode: multiply;
+    display: flex;
+    gap: 500px;
+    
 
+}
+#intro{
+   margin-top: 250px;
+   margin-left: 20px;
+}
+#intro h2{
+    margin-bottom: 5px;
+}
+#intro p{
+    margin-bottom: 10px;
+}
+#intro button{
+    border: 1px solid #122d40;
+    border-radius: 40px;
+    padding: 9px;
+    
+}
+#btn-1{
+    color: white;
+    background: #122d40;
+
+}
+#btn-2{
+    background: white;
+    color: #122d40;
+
+}
+#btn-1:hover{
+    background: #01e281;
+    color: #122d40;
+}
+#btn-2:hover{
+    background: #01e281;
+    color: #122d40;
+}
