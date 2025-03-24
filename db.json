@@ -1,0 +1,29 @@
+{
+    "items": [
+      {
+        "id": 1,
+        "name": "Arroz",
+        "price": 22.89
+      },
+      {
+        "id": 2,
+        "name": "Feijão",
+        "price": 30.89
+      },
+      {
+        "id": 3,
+        "name": "Açúcar",
+        "price": 10.99
+      },
+      {
+        "id": 4,
+        "name": "Macarrão",
+        "price": 4.30
+      },
+      {
+        "id": 5,
+        "name": "Leite",
+        "price": 8.50
+      }
+    ]
+  }

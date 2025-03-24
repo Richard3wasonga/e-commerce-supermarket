@@ -145,6 +145,7 @@ a:link{
     justify-content: space-between;
     align-items: center; 
     margin-left: 400px;
+    margin-top: -70px;
 }
 
 .desinfo {
@@ -153,7 +154,9 @@ a:link{
     padding: 10px;
     text-align: left;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
+    font-size: 19px;
+    
 }
 
 #shipping {
@@ -173,6 +176,7 @@ a:link{
 }
 
 .desinfo img {
-    width: 40px;
+    width: 100px;
     height: auto;
+    
 }
