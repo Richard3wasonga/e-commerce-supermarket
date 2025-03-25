@@ -82,3 +82,4 @@ function initCart() {
     })
 
 }
+fetchProducts()
