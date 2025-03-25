@@ -21,11 +21,11 @@ function displayProducts(prod){
     prod.forEach(item => {
         let product_div = createElement("div")
         product_div.classList.add("single-products")
-        product_caterory.innerHTML =`
-            <img src="${item.image}" alt="${item.title}">
-            <h4>${item.title}</h4>
+        product_div.innerHTML =`
+            <img src="${item.image}" alt="${item.name}">
+            <h4>${item.name}</h4>
             <p>Price: $${item.price}</p>
-            <button onclick"addtocart(${item.id})">Add to cart</button>
+            <button onclick = "addtocart(${item.id})">Add to cart</button>
     `
     product_caterory.appendChild(product_div)
     });
