@@ -51,6 +51,18 @@
 #search-icon:hover i{
     color: #01e281;
 }
+#cart{
+    margin-left: 900px;
+    border-radius: 100px;
+    background: #122d40;
+    border-color: #ffec62;
+
+}
+#cart i{
+   font-size: 25px;
+   color: #ccc;
+
+}
 
 #sub-header{
     position: absolute;

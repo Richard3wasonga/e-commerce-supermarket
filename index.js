@@ -5,6 +5,9 @@ function getId (id_name){
 function createElement(element){
     return document.createElement(element)
 }
+function addEvent(element,event,callback){
+    return element.addEventListener(event,callback)
+}
 fetch(server_url,{
     method: "GET",
     headers:{
@@ -32,7 +35,14 @@ function displayProducts(prod){
     
 
 }
+
 function addtocart(procuctId){
     console.log(`product With Id ${procuctId} added to cart`)
     alert("Product added to cart")
+}
+let cart_p = getId("cart")
+addEvent(cart_p,'click',() => cartItems)
+function cartItems(){
+    
+
 }
