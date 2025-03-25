@@ -55,12 +55,11 @@ function addtocart(productId){
     }
     console.log(`product With Id ${productId} added to cart`)
     alert("Product added to cart")
-        
+ }    
 }
 
 
-let  cartButton = getId("cart");
-addEvent(cartButton,"click",displayItems)
+
 
 function displayItems(){
     let cartContainer = getId("cart-container")
@@ -89,3 +88,5 @@ function removefromcart(productId){
 
     }
 }
+let  cartButton = getId("cart");
+addEvent(cartButton,"click",displayItems)
