@@ -60,4 +60,11 @@ function initCart() {
     const body = document.querySelector('body');
     const checkoutBtn = document.querySelector('.checkout');
 
+    addEvent(iconcart, 'click',() => {
+        body.classList.toggle('showcart')
+        if(body.classList.contains('showcart')){
+            addCartToHtml()
+        }
+    })
+
 }
