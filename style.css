@@ -180,7 +180,17 @@ a:link{
     height: auto;
     
 }
+#product-category{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
 .single-products{
+    position: relative;
     border: 1px solid #000;
     margin: 10px;
     padding: 10px;
@@ -188,6 +198,9 @@ a:link{
     text-align: center;
     width: 200px;
     display: inline-block;
+    margin: 30px;
+    justify-content: space-between;
+    box-shadow: 20px 20px 3px  #d0a517;
     
 }
 .single-products img{
@@ -209,8 +222,10 @@ a:link{
     background: #122d40;
 }
 .single-products button{
+    position: absolute;
     border-radius: 20px;
     width: 100px;
     height: 40px;
+    left: 50px;
 
 }

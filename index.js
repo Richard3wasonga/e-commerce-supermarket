@@ -14,7 +14,7 @@ fetch(server_url,{
     
 })
 .then( res => res.json())
-.then(data => displayProducts(data))
+.then(data => displayProducts(data.slice(0,12)))
 .catch(error => console.error("Error in fetching data:", error))
 function displayProducts(prod){
     let product_caterory =getId('product-category')
