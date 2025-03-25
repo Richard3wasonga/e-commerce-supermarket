@@ -66,5 +66,8 @@ function initCart() {
             addCartToHtml()
         }
     })
+    addEvent(closecart, 'click', () => {
+        body.classList.remove('showcart')
+    })
 
 }
