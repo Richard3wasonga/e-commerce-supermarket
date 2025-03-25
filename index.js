@@ -1,4 +1,6 @@
 const server_url = "http://localhost:3000/items"
+let productList =[];
+const cartItems = [];
 function getId (id_name){
     return document.getElementById(id_name)
 }
@@ -7,6 +9,10 @@ function createElement(element){
 }
 function addEvent(element,event,callback){
     return element.addEventListener(event,callback)
+}
+function appendChild(element_1,element_2){
+    return element_1.appendChild(element_2)
+
 }
 fetch(server_url,{
     method: "GET",
@@ -17,7 +23,9 @@ fetch(server_url,{
     
 })
 .then( res => res.json())
-.then(data => displayProducts(data.slice(0,12)))
+.then(data => { 
+    productList= data;
+    displayProducts(data.slice(0,12))})
 .catch(error => console.error("Error in fetching data:", error))
 function displayProducts(prod){
     let product_caterory =getId('product-category')
@@ -37,12 +45,48 @@ function displayProducts(prod){
 }
 
 function addtocart(procuctId){
-    console.log(`product With Id ${procuctId} added to cart`)
-    alert("Product added to cart")
+    const product = productList.find(item => item.id === procuctId)
+    if (product){
+        console.log(`product With Id ${procuctId} added to cart`)
+        alert("Product added to cart")
+        cartItems(product)
+    }
+    let existingItem = cartItems.find(item => item.id === procuctId)
+    if(existingItem){
+        existingItem.quantity += 1
+    }else {
+        cartItems.push({...product,quantity: 1})
+    }
 }
-let cart_p = getId("cart")
-addEvent(cart_p,'click',() => cartItems)
-function cartItems(){
-    
 
+
+let  cartButton = getId("cart");
+addEvent(cartButton,"click",displayItems)
+
+function displayItems(){
+    let cartContainer = getId("cart-container")
+    cartContainer.innerHTML =""
+    if(cartItems.length === 0){
+        cartContainer.innerHTML="<p>Your cart is empty.</P>"
+        return;
+    }
+    cartItems.forEach(item => {
+        let cartItem= createElement("div")
+        cartItem.classList.add("cart-item")
+        cartItem.innerHTML= `
+            <img src="${item.image}" alt="${item.name}">
+            <h4>${item.name}</h4>
+            <p>Price: $${item.price}</p>
+            <button onclick = "removefromcart(${item.id})">Remove</button>
+        `;
+        appendChild(cartContainer,cartItem)
+    })
+}
+function removefromcart(procuctId){
+    let index = cartItems.findIndex(item => item.id === procuctId)
+    if(index !== -1){
+        cartItems.splice(index,1)
+        displayItems()
+
+    }
 }
