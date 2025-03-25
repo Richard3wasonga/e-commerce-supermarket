@@ -188,14 +188,29 @@ a:link{
     text-align: center;
     width: 200px;
     display: inline-block;
+    
 }
 .single-products img{
-    width: 150px;
+    width: 100%;
     height: 150px;
+    object-fit: cover;
 }
 .single-products button{
     display: none;
+    
 }
 .single-products:hover button{
     display: block;
+    color: #122d40;
+    background: #01e281;
+}
+.single-products button:hover{
+    color: #01e281;
+    background: #122d40;
+}
+.single-products button{
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+
 }

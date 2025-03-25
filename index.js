@@ -25,7 +25,7 @@ function displayProducts(prod){
             <img src="${item.image}" alt="${item.name}">
             <h4>${item.name}</h4>
             <p>Price: $${item.price}</p>
-            <button onclick = "addtocart(${item.id})">Add to cart</button>
+            <button id="prod-btn" onclick = "addtocart(${item.id})">Add to cart</button>
     `
     product_caterory.appendChild(product_div)
     });
