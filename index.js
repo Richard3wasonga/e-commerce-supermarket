@@ -69,5 +69,16 @@ function initCart() {
     addEvent(closecart, 'click', () => {
         body.classList.remove('showcart')
     })
+    addEvent(getId('product-category'), 'click',(e) => {
+        if(e.target.classList.contains('cart-minus')){
+            adjustQuantity(e.target.dataset.id, -1)
+        }else if(e.target.classList.contains('qty-plus')){
+            adjustQuantity(e.target.dataset.id, 1)
+        }else if(e.target.classList.contains('prod-btn')){
+            const itemId = Number(e.target.dataset.id)
+            const qty = parseInt(document.querySelector(`.qty-value[data-id="${itemId}"]`).textContent)
+            addToCart(itemId,qty)
+        }
+    })
 
 }
