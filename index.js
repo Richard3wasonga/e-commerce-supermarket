@@ -44,19 +44,18 @@ function displayProducts(prod){
 
 }
 
-function addtocart(procuctId){
-    const product = productList.find(item => item.id === procuctId)
+function addtocart(productId){
+    const product = productList.find(item => item.id === productId)
     if (product){
-        console.log(`product With Id ${procuctId} added to cart`)
-        alert("Product added to cart")
-        cartItems(product)
-    }
-    let existingItem = cartItems.find(item => item.id === procuctId)
+    let existingItem = cartItems.find(item => item.id === productId)
     if(existingItem){
         existingItem.quantity += 1
     }else {
         cartItems.push({...product,quantity: 1})
     }
+    console.log(`product With Id ${productId} added to cart`)
+    alert("Product added to cart")
+        
 }
 
 
@@ -82,8 +81,8 @@ function displayItems(){
         appendChild(cartContainer,cartItem)
     })
 }
-function removefromcart(procuctId){
-    let index = cartItems.findIndex(item => item.id === procuctId)
+function removefromcart(productId){
+    let index = cartItems.findIndex(item => item.id === productId)
     if(index !== -1){
         cartItems.splice(index,1)
         displayItems()
