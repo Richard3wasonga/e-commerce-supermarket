@@ -80,6 +80,19 @@ function initCart() {
             addToCart(itemId,qty)
         }
     })
+    addEvent(listcartHtml,'click', (e) => {
+        if (e.target.classList.contains('cart-minus')) {
+            adjustCartQuantity(e.target.closest('.item').dataset.id, -1);
+        } else if (e.target.classList.contains('cart-plus')) {
+            adjustCartQuantity(e.target.closest('.item').dataset.id, 1);
+        } else if (e.target.classList.contains('remove-item')) {
+            removeFromCart(e.target.closest('.item').dataset.id);
+        }
+    })
+    addEvent(checkoutBtn,'click', () => {
+        alert('Proceeding to checkout!')
+    })
 
 }
+
 fetchProducts()
