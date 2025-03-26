@@ -17,9 +17,27 @@
     
 
 }
+#admin-btn {
+    background: none;
+    border: none;
+    color: blue; 
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+#admin-btn:hover {
+    color: #2c8a4a; 
+}
 #search-form{
     position: relative;
     width: 400px
+    
 }
 #search-bar{
     width: 100%;
@@ -99,7 +117,7 @@ a:link{
     color: white;
 }
 #outer-intro{
-    background:#ffec62;
+    background: #4CAF50;
     height: 700px;
     background-blend-mode: multiply;
     display: flex;
@@ -371,3 +389,49 @@ body.showcart .cartTab {
     min-width: 20px;
     text-align: center;
 }
+.container header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4CAF50; 
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.icon-cart {
+    position: relative;
+    cursor: pointer;
+    font-size: 24px;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+}
+
+.icon-cart:hover {
+    color: #4CAF50;
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+

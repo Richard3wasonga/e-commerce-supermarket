@@ -3,10 +3,18 @@ const listcartHtml = document.querySelector('.listcart');
 const iconcartspan = document.querySelector('.cart-count');
 let productList = [];
 let carts = JSON.parse(localStorage.getItem('cart')) || [];
-function getId(id_name) { return document.getElementById(id_name); }
-function createElement(element) { return document.createElement(element); }
-function addEvent(element, event, callback) { return element.addEventListener(event, callback); }
-function appendChild(element_1, element_2) { return element_1.appendChild(element_2); }
+function getId(id_name) { 
+    return document.getElementById(id_name); 
+}
+function createElement(element) { 
+    return document.createElement(element); 
+}
+function addEvent(element, event, callback) { 
+    return element.addEventListener(event, callback); 
+}
+function appendChild(element_1, element_2) { 
+    return element_1.appendChild(element_2); 
+}
 
 
 function fetchProducts() {
