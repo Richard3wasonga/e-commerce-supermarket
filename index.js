@@ -100,4 +100,17 @@ function adjustQuantity(productId, change) {
     if (newQty < 1) newQty = 1;
     qtyElement.textContent = newQty;
 }
+function adjustCartQuantity(productId, change) {
+    const itemIndex = carts.findIndex(item => item.product_id == productId);
+    if (itemIndex >= 0) {
+        carts[itemIndex].quantity += change;
+        
+        if (carts[itemIndex].quantity < 1) {
+            carts.splice(itemIndex, 1);
+        }
+        
+        
+    }
+}
+
 fetchProducts()
