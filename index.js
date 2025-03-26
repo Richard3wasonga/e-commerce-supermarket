@@ -150,5 +150,44 @@ function removeFromCart(productId) {
     addCartToHtml();
     updateCartIcon();
 }
+function addCartToHtml() {
+    listcartHtml.innerHTML = '';
+    let total = 0;
+    
+    if (carts.length === 0) {
+        listcartHtml.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
+        document.querySelector('.cart-total').textContent = 'Total: $0.00';
+        return;
+    }
+    
+    carts.forEach(item => {
+        const product = productList.find(p => p.id == item.product_id);
+        if (!product) return;
+        
+        const subtotal = product.price * item.quantity;
+        total += subtotal;
+        
+        const itemElement = createElement('div');
+        itemElement.className = 'item';
+        itemElement.dataset.id = item.product_id;
+        itemElement.innerHTML = `
+            <div class="image">
+                <img src="${product.image}" alt="${product.name}">
+            </div>
+            <div class="name">${product.name}</div>
+            <div class="price">$${product.price.toFixed(2)}</div>
+            <div class="quantity">
+                <button class="cart-minus">-</button>
+                <span>${item.quantity}</span>
+                <button class="cart-plus">+</button>
+            </div>
+            <div class="totalprice">$${subtotal.toFixed(2)}</div>
+            <button class="remove-item">×</button>
+        `;
+        appendChild(listcartHtml, itemElement);
+    });
+    
+    document.querySelector('.cart-total').textContent = `Total: $${total.toFixed(2)}`;
+}
 
 fetchProducts()
