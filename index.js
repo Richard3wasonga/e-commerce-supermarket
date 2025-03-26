@@ -112,5 +112,32 @@ function adjustCartQuantity(productId, change) {
         
     }
 }
+function addToCart(productId, quantity) {
+    const existingItem = carts.find(item => item.product_id == productId);
+    const product = productList.find(p => p.id == productId);
+    
+    if (!product) return;
+    
+    if (existingItem) {
+        existingItem.quantity += quantity;
+    } else {
+        carts.push({
+            product_id: productId,
+            quantity: quantity,
+            price: product.price,
+            name: product.name,
+            image: product.image
+        });
+    }
+    
+    
+    
+    
+    const btn = document.querySelector(`.prod-btn[data-id="${productId}"]`);
+    if (btn) {
+        btn.textContent = 'Added!';
+        setTimeout(() => btn.textContent = 'Add to cart', 1000);
+    }
+}
 
 fetchProducts()
