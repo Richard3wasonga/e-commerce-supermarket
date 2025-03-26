@@ -241,3 +241,61 @@ a:link{
     left: 50px;
 
 }
+.cartTab {
+    position: fixed;
+    top: 0;
+    right: -400px; 
+    width: 400px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+body.showcart .cartTab {
+    right: 0; 
+}
+
+.listcart {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 80px 1fr 70px 100px 70px 30px;
+    gap: 10px;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item .image img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart-total {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 20px 0;
+    text-align: right;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
