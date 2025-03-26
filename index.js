@@ -198,3 +198,9 @@ function updateCartIcon() {
         setTimeout(() => iconcartspan.classList.remove('pulse'), 500);
     }
 }
+function saveCart() {
+    localStorage.setItem('cart', JSON.stringify(carts));
+}
+
+
+fetchProducts().then(initCart);
