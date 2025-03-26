@@ -94,5 +94,10 @@ function initCart() {
     })
 
 }
-
+function adjustQuantity(productId, change) {
+    const qtyElement = document.querySelector(`.qty-value[data-id="${productId}"]`);
+    let newQty = parseInt(qtyElement.textContent) + change;
+    if (newQty < 1) newQty = 1;
+    qtyElement.textContent = newQty;
+}
 fetchProducts()
