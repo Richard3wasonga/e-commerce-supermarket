@@ -189,5 +189,12 @@ function addCartToHtml() {
     
     document.querySelector('.cart-total').textContent = `Total: $${total.toFixed(2)}`;
 }
-
-fetchProducts()
+function updateCartIcon() {
+    const totalItems = carts.reduce((sum, item) => sum + item.quantity, 0);
+    iconcartspan.textContent = totalItems;
+    
+    if (totalItems > 0) {
+        iconcartspan.classList.add('pulse');
+        setTimeout(() => iconcartspan.classList.remove('pulse'), 500);
+    }
+}
