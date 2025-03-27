@@ -1,5 +1,5 @@
 let form = document.querySelector("form");
-let base_url = 'http://localhost:3000/items';
+let base_url = 'https://e-commerce-supermarket-server.vercel.app/items';
 let itemList = document.getElementById("item-list");
 
 

@@ -1,4 +1,4 @@
-const server_url = "http://localhost:3000/items";
+const server_url = "https://e-commerce-supermarket-server.vercel.app/items";
 const listcartHtml = document.querySelector('.listcart');
 const iconcartspan = document.querySelector('.cart-count');
 let productList = [];
