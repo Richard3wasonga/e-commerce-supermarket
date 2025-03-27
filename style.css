@@ -11,7 +11,7 @@
     height: 100px;
 }
 #main-header h1{
-    background: white;
+    background: linear-gradient(to bottom,#ffec62,#01e281);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
@@ -36,6 +36,12 @@
 
 #admin-btn:hover {
     color: #2c8a4a; 
+}
+#site-logo {
+    height: 100px;  
+    width: auto;
+    margin-left: 10px;
+    
 }
 #search-form{
     position: relative;
