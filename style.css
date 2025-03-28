@@ -330,6 +330,7 @@ body.showcart .cartTab {
     position: relative;
     display: inline-block;
     cursor: pointer;
+    margin-right: 20px;
 }
 
 .cart-count {
